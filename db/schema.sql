@@ -5,7 +5,7 @@ USE burgers_db;
 drop table burgers;
 
 CREATE TABLE burgers(
-  id int NOT NULL AUTO_INCREMENT,
+  id integer NOT NULL,
   burger_name varchar(40) NOT NULL,
   devoured boolean NOT NULL,
   PRIMARY KEY (id)
