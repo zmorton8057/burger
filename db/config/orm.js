@@ -1,8 +1,8 @@
 const connection = require("./connection.js")
 var ORM = {
-    selectAll: function(colToSearch, tableInput) {
-        var queryString = "SELECT * FROM burgers WHERE ?? = ?";
-        connection.query(queryString, [tableInput, colToSearch], function(err, res){
+    selectAll: function() {
+        var queryString = "SELECT * FROM burgers";
+        connection.query(queryString, function(err, res){
             if (err) throw err
             console.log(res)
         })
