@@ -11,7 +11,9 @@ database: "burgers_DB"
 connection.connect(function(err){
     if (err) throw err;
     console.log('connection as id ' + connection.threadId)
-    connection.end();
+    
 });
+
+
 
 module.exports = connection;
