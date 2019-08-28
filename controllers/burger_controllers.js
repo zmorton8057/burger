@@ -1,10 +1,16 @@
 const express = require('express');
 var router = express.Router()
 const burger = require('../models/burgers.js')
-var connection = require("../db/config/connection.js")
+
 
 router.get("/", function (req, res) {
-    res.send("burgerSSS")
+    burger.selectAll(function(data){
+        var burgerObject = {
+            burger: data
+        };
+        console.log(burgerObject)
+        res.render("index", burgerObject)
+    })
 })
 
 router.get("/burger", function (req, res) {
